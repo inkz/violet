@@ -87,7 +87,7 @@ dependencies:
   flutter_downloader: ^1.11.3
   flutter_heatmap_calendar: ^1.0.5
   flutter_image_compress: ^2.0.4
-  flutter_inappwebview: ^5.8.0
+  flutter_inappwebview: ^6.1.5
   flutter_markdown:
   flutter_mobx:
   flutter_reorderable_list:

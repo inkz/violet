@@ -50,6 +50,7 @@ class _ScriptWebViewState extends State<ScriptWebView>
   }
 
   Future<void> timerCallback(timer) async {
+    Logger.error('reload!!');
     webViewController?.reload();
   }
 
@@ -83,14 +84,14 @@ class _ScriptWebViewState extends State<ScriptWebView>
         height: 1,
         child: InAppWebView(
           initialUrlRequest: URLRequest(
-            url: Uri.parse('https://hitomi.la/'),
+            url: WebUri.uri(Uri.parse('https://hitomi.la/')),
           ),
-          initialOptions: InAppWebViewGroupOptions(
-              crossPlatform: InAppWebViewOptions(
-                  useOnLoadResource: true,
-                  userAgent:
-                      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36')),
+          initialSettings: InAppWebViewSettings(
+              useOnLoadResource: true,
+              userAgent:
+                  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'),
           onWebViewCreated: (controller) {
+            Logger.warning('agg');
             webViewController = controller;
 
             controller.addJavaScriptHandler(
@@ -110,6 +111,7 @@ class _ScriptWebViewState extends State<ScriptWebView>
             }
           },
           onLoadError: ((controller, url, code, message) {
+            Logger.warning('$code $message');
             // net::ERR_CONNECTION_RESET
             // NSURLErrorDomain -999 (Connection Reset)
             // An SSL error has occurred and a secure connection to the server cannot be made.
@@ -126,6 +128,7 @@ class _ScriptWebViewState extends State<ScriptWebView>
             Logger.error('[Script Webview] Error $code\n$message');
           }),
           onLoadHttpError: (controller, url, statusCode, description) {
+            Logger.warning('kk');
             if (!(url.toString() == 'https://hitomi.la' ||
                 url.toString() == 'https://hitomi.la/')) return;
 
@@ -145,6 +148,7 @@ class _ScriptWebViewState extends State<ScriptWebView>
                 '[Script Webview] Http Error $statusCode\n$description');
           },
           onLoadStop: (controller, url) async {
+            Logger.warning('aac');
             if (isCurrentReload) {
               isCurrentReload = false;
               return;

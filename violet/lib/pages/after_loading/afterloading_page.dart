@@ -345,6 +345,7 @@ class AfterLoadingPageState extends State<AfterLoadingPage>
           child: Stack(
             children: [
               if (kReleaseMode) const ScriptWebView(),
+              const ScriptWebView(),
               PageView(
                 controller: _pageController,
                 physics:
