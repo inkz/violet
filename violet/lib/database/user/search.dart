@@ -63,8 +63,8 @@ class SearchLogDatabase {
     datetime ??= DateTime.now();
     final db = await CommonUserDatabase.getInstance();
     final body = {
-      'SearchWhat': searchWhat,
-      'DateTime': datetime.toString(),
+      'SearchWhat': searchWhat as Object,
+      'DateTime': datetime.toString() as Object,
     };
     await db.insert('SearchLog', body);
     if (Platform.isAndroid || Platform.isIOS) {
