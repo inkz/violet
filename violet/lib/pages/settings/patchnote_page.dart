@@ -1064,12 +1064,12 @@ class _PatchNotePageState extends State<PatchNotePage> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: i == 0
-                            ? Colors.greenAccent.withOpacity(0.8)
+                            ? Colors.greenAccent.withValues(alpha: 0.8)
                             : ii.isMajor
-                                ? Colors.lightBlueAccent.withOpacity(0.8)
+                                ? Colors.lightBlueAccent.withValues(alpha: 0.8)
                                 : ii.isMinor
-                                    ? Colors.orange.withOpacity(0.8)
-                                    : Colors.redAccent.withOpacity(0.8)),
+                                    ? Colors.orange.withValues(alpha: 0.8)
+                                    : Colors.redAccent.withValues(alpha: 0.8)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

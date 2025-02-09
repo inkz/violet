@@ -419,7 +419,7 @@ class __ChipState extends State<_Chip> {
     } else if (group == 'series') {
       color = Colors.cyan;
     } else if (group == 'artist' || group == 'group') {
-      color = Colors.green.withOpacity(0.6);
+      color = Colors.green.withValues(alpha: 0.6);
     } else if (group == 'type') {
       color = Colors.orange;
     }

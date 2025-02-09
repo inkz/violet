@@ -67,7 +67,7 @@ class _ViewerSettingPanelState extends State<ViewerSettingPanel> {
                       max: 20,
                       min: 1,
                       divisions: (20 - 1) * 2,
-                      inactiveColor: Settings.majorColor.withOpacity(0.7),
+                      inactiveColor: Settings.majorColor.withValues(alpha: 0.7),
                       activeColor: Settings.majorColor,
                       onChangeEnd: (value) async {
                         await Settings.setTimerTick(value);
@@ -313,7 +313,8 @@ class _ViewerSettingPanelState extends State<ViewerSettingPanel> {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
           child: Container(
-            decoration: BoxDecoration(color: Colors.black.withOpacity(0.6)),
+            decoration:
+                BoxDecoration(color: Colors.black.withValues(alpha: 0.6)),
             padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
             child: listview,
           ),
@@ -321,7 +322,7 @@ class _ViewerSettingPanelState extends State<ViewerSettingPanel> {
       );
     } else {
       return Container(
-        color: Colors.black.withOpacity(0.8),
+        color: Colors.black.withValues(alpha: 0.8),
         padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
         child: listview,
       );

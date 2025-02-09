@@ -208,8 +208,9 @@ class _CropBookmarkPageState extends State<CropBookmarkPage> {
                           setState(() {});
                         }
                       },
-                      highlightColor:
-                          Theme.of(context).highlightColor.withOpacity(0.15),
+                      highlightColor: Theme.of(context)
+                          .highlightColor
+                          .withValues(alpha: 0.15),
                     ),
                   ),
                 ),

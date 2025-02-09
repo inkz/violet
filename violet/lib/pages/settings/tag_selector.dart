@@ -224,7 +224,7 @@ class _TagSelectorDialogState extends State<TagSelectorDialog> {
     } else if (info.$1.group == 'series') {
       color = Colors.cyan;
     } else if (info.$1.group == 'artist' || info.$1.group == 'group') {
-      color = Colors.green.withOpacity(0.6);
+      color = Colors.green.withValues(alpha: 0.6);
     } else if (info.$1.group == 'type') {
       color = Colors.orange;
     }

@@ -175,7 +175,8 @@ class _LabRecentRecordsUState extends State<LabRecentRecordsU> {
                         max: 180,
                         min: 0,
                         divisions: (180 - 0),
-                        inactiveColor: Settings.majorColor.withOpacity(0.7),
+                        inactiveColor:
+                            Settings.majorColor.withValues(alpha: 0.7),
                         activeColor: Settings.majorColor,
                         onChangeEnd: (value) async {
                           limit = value.toInt();

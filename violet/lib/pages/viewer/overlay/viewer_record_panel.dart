@@ -111,7 +111,8 @@ class _ViewerRecordPanelState extends State<ViewerRecordPanel> {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
           child: Container(
-            decoration: BoxDecoration(color: Colors.black.withOpacity(0.6)),
+            decoration:
+                BoxDecoration(color: Colors.black.withValues(alpha: 0.6)),
             padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
             child: records,
           ),
@@ -119,7 +120,7 @@ class _ViewerRecordPanelState extends State<ViewerRecordPanel> {
       );
     } else {
       return Container(
-        color: Colors.black.withOpacity(0.8),
+        color: Colors.black.withValues(alpha: 0.8),
         padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
         child: records,
       );

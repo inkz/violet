@@ -78,10 +78,10 @@ class _ToastWrapperState extends State<ToastWrapper>
   Widget build(BuildContext context) {
     var color = widget.color ??
         (widget.isCheck
-            ? Colors.greenAccent.withOpacity(0.8)
+            ? Colors.greenAccent.withValues(alpha: 0.8)
             : widget.isWarning
-                ? Colors.orangeAccent.withOpacity(0.8)
-                : Colors.redAccent.withOpacity(0.8));
+                ? Colors.orangeAccent.withValues(alpha: 0.8)
+                : Colors.redAccent.withValues(alpha: 0.8));
 
     return IgnorePointer(
       child: Visibility(
@@ -118,15 +118,15 @@ class _ToastWrapperState extends State<ToastWrapper>
                         horizontal: 24.0, vertical: 12.0),
                     decoration: BoxDecoration(
                         color: Settings.themeWhat
-                            ? Colors.black.withOpacity(0.6)
-                            : Colors.grey.withOpacity(0.1)),
+                            ? Colors.black.withValues(alpha: 0.6)
+                            : Colors.grey.withValues(alpha: 0.1)),
                     // decoration: BoxDecoration(
                     //   borderRadius: BorderRadius.circular(25.0),
                     //   color: widget.isCheck
-                    //       ? Colors.greenAccent.withOpacity(0.8)
+                    //       ? Colors.greenAccent.withValues(alpha: 0.8)
                     //       : widget.isWarning != null && widget.isWarning
-                    //           ? Colors.orangeAccent.withOpacity(0.8)
-                    //           : Colors.redAccent.withOpacity(0.8),
+                    //           ? Colors.orangeAccent.withValues(alpha: 0.8)
+                    //           : Colors.redAccent.withValues(alpha: 0.8),
                     // ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,

@@ -228,7 +228,7 @@ class _HotPageState extends ThemeSwitchableState<HotPage>
         color: Settings.themeWhat
             ? Settings.themeBlack
                 ? const Color(0xFF060606)
-                : Colors.grey.shade900.withOpacity(0.90)
+                : Colors.grey.shade900.withValues(alpha: 0.90)
             : Colors.grey.shade50,
         icon: Theme(
           data: ThemeData(

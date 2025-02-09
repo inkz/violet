@@ -105,7 +105,8 @@ class _ViewerTabPanelState extends State<ViewerTabPanel> {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
           child: Container(
-            decoration: BoxDecoration(color: Colors.black.withOpacity(0.4)),
+            decoration:
+                BoxDecoration(color: Colors.black.withValues(alpha: 0.4)),
             padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
             child: view,
           ),
@@ -113,7 +114,7 @@ class _ViewerTabPanelState extends State<ViewerTabPanel> {
       );
     } else {
       return Container(
-        color: Colors.black.withOpacity(0.8),
+        color: Colors.black.withValues(alpha: 0.8),
         padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
         child: view,
       );

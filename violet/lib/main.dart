@@ -114,8 +114,8 @@ class MyApp extends StatelessWidget {
                 : SystemUiOverlayStyle.light),
         useMaterial3: false,
         brightness: brightness,
-        bottomSheetTheme:
-            BottomSheetThemeData(backgroundColor: Colors.black.withOpacity(0)),
+        bottomSheetTheme: BottomSheetThemeData(
+            backgroundColor: Colors.black.withValues(alpha: 0)),
         scaffoldBackgroundColor:
             Settings.themeBlack && Settings.themeWhat ? Colors.black : null,
         dialogBackgroundColor: Settings.themeBlack && Settings.themeWhat

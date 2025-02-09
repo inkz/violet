@@ -606,7 +606,7 @@ class _DownloadPageState extends ThemeSwitchableState<DownloadPage>
                     BoxShadow(
                       color: Settings.themeWhat
                           ? Colors.black26
-                          : Colors.grey.withOpacity(0.1),
+                          : Colors.grey.withValues(alpha: 0.1),
                       spreadRadius: Settings.themeWhat ? 0 : 5,
                       blurRadius: 7,
                       offset: const Offset(0, 3), // changes position of shadow
@@ -722,8 +722,8 @@ class _DownloadPageState extends ThemeSwitchableState<DownloadPage>
                     color: Settings.themeWhat
                         ? Settings.themeBlack
                             ? Palette.blackThemeBackground
-                            : Colors.grey.shade900.withOpacity(0.4)
-                        : Colors.grey.shade200.withOpacity(0.4),
+                            : Colors.grey.shade900.withValues(alpha: 0.4)
+                        : Colors.grey.shade200.withValues(alpha: 0.4),
                     child: ListTile(
                       title: TextFormField(
                         cursorColor: Colors.black,

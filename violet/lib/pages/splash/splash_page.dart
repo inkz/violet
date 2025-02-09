@@ -518,7 +518,7 @@ class _SplashPageState extends State<SplashPage> {
           MdiIcons.database,
           size: 50,
           color: widget.switching
-              ? Settings.majorAccentColor.withOpacity(0.8)
+              ? Settings.majorAccentColor.withValues(alpha: 0.8)
               : Colors.grey,
         ),
         Container(

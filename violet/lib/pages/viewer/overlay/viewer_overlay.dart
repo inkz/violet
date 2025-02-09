@@ -128,7 +128,7 @@ class _ViewerOverlayState extends State<ViewerOverlay> {
             ),
             child: CupertinoButton(
               minSize: 48.0,
-              color: Colors.black.withOpacity(0.8),
+              color: Colors.black.withValues(alpha: 0.8),
               pressedOpacity: 0.4,
               disabledColor: CupertinoColors.quaternarySystemFill,
               borderRadius: const BorderRadius.all(Radius.circular(8.0)),
@@ -192,7 +192,7 @@ class _ViewerOverlayState extends State<ViewerOverlay> {
                     : MainAxisAlignment.start,
                 children: [
                   Material(
-                    color: Colors.black.withOpacity(0.8),
+                    color: Colors.black.withValues(alpha: 0.8),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -234,7 +234,7 @@ class _ViewerOverlayState extends State<ViewerOverlay> {
                           height: Variables.bottomBarHeight +
                               (Platform.isIOS ? 48 - 24 : 0),
                           color: Platform.isIOS
-                              ? Colors.black.withOpacity(0.8)
+                              ? Colors.black.withValues(alpha: 0.8)
                               : Colors.black,
                         )
                       : Container(),
@@ -276,8 +276,8 @@ class _ViewerOverlayState extends State<ViewerOverlay> {
           child: ToastWrapper(
             icon: c.bookmark.value ? Icons.delete_forever : Icons.check,
             color: c.bookmark.value
-                ? Colors.redAccent.withOpacity(0.8)
-                : Colors.greenAccent.withOpacity(0.8),
+                ? Colors.redAccent.withValues(alpha: 0.8)
+                : Colors.greenAccent.withValues(alpha: 0.8),
             ignoreDrawer: true,
             reverse: true,
             msg:
@@ -541,7 +541,7 @@ class _ViewerOverlayState extends State<ViewerOverlay> {
         min: 1,
         label: '${c.page.value + 1}',
         divisions: c.maxPage,
-        inactiveColor: Settings.majorColor.withOpacity(0.7),
+        inactiveColor: Settings.majorColor.withValues(alpha: 0.7),
         activeColor: Settings.majorColor,
         onChangeStart: (value) {
           c.sliderOnChange = true;
@@ -640,7 +640,7 @@ class _ViewerOverlayState extends State<ViewerOverlay> {
                         (!c.appBarToBottom.value ? 48 : 0)),
                 curve: Curves.easeInOut,
                 child: Material(
-                  color: Colors.black.withOpacity(0.8),
+                  color: Colors.black.withValues(alpha: 0.8),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -882,7 +882,8 @@ class _ViewerOverlayState extends State<ViewerOverlay> {
               style: const TextStyle(color: Colors.white),
               decoration: InputDecoration.collapsed(
                   hintText: '대사 입력',
-                  hintStyle: TextStyle(color: Colors.white.withOpacity(0.5))),
+                  hintStyle:
+                      TextStyle(color: Colors.white.withValues(alpha: 0.5))),
               controller: c.searchText,
               // autofocus: true,
               onEditingComplete: c.onModifiedText,

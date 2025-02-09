@@ -317,8 +317,8 @@ class _ArticleListItemWidgetState extends State<ArticleListItemWidget>
         child: ToastWrapper(
           icon: c.isBookmarked.value ? Icons.delete_forever : Icons.check,
           color: c.isBookmarked.value
-              ? Colors.redAccent.withOpacity(0.8)
-              : Colors.greenAccent.withOpacity(0.8),
+              ? Colors.redAccent.withValues(alpha: 0.8)
+              : Colors.greenAccent.withValues(alpha: 0.8),
           msg:
               '${data.queryResult.id()}${locale.Translations.instance!.trans(c.isBookmarked.value ? 'removetobookmark' : 'addtobookmark')}',
         ),
@@ -434,13 +434,13 @@ class BodyWidget extends StatelessWidget {
                           ? Palette.blackThemeBackground
                           : Colors.grey.shade800
                       : Colors.white70
-                  : Colors.grey.withOpacity(0.3),
+                  : Colors.grey.withValues(alpha: 0.3),
               borderRadius: const BorderRadius.all(Radius.circular(3)),
               boxShadow: [
                 BoxShadow(
                   color: Settings.themeWhat
-                      ? Colors.grey.withOpacity(0.08)
-                      : Colors.grey.withOpacity(0.4),
+                      ? Colors.grey.withValues(alpha: 0.08)
+                      : Colors.grey.withValues(alpha: 0.4),
                   spreadRadius: 5,
                   blurRadius: 7,
                   offset: const Offset(0, 3), // changes position of shadow

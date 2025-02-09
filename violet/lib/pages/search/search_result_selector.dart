@@ -20,8 +20,8 @@ class SearchResultSelector extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Settings.themeWhat
-                ? Colors.black.withOpacity(0.4)
-                : Colors.grey.withOpacity(0.2),
+                ? Colors.black.withValues(alpha: 0.4)
+                : Colors.grey.withValues(alpha: 0.2),
             spreadRadius: 1,
             blurRadius: 1,
             offset: const Offset(0, 3), // changes position of shadow

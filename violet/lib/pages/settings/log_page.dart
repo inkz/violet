@@ -92,10 +92,10 @@ class _LogPageState extends State<LogPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       color: ii.isError == false && ii.isWarning == false
-                          ? Colors.greenAccent.withOpacity(0.8)
+                          ? Colors.greenAccent.withValues(alpha: 0.8)
                           : ii.isWarning
-                              ? Colors.orangeAccent.withOpacity(0.8)
-                              : Colors.redAccent.withOpacity(0.8),
+                              ? Colors.orangeAccent.withValues(alpha: 0.8)
+                              : Colors.redAccent.withValues(alpha: 0.8),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

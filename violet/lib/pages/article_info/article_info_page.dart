@@ -73,8 +73,8 @@ class ArticleInfoPage extends StatelessWidget {
           height: Variables.articleInfoHeight,
           child: Container(
             color: Settings.themeWhat
-                ? Colors.black.withOpacity(0.9)
-                : Colors.white.withOpacity(0.97),
+                ? Colors.black.withValues(alpha: 0.9)
+                : Colors.white.withValues(alpha: 0.97),
             child: ListView(
               controller: data.controller,
               children: [
@@ -82,8 +82,8 @@ class ArticleInfoPage extends StatelessWidget {
                   width: width,
                   height: simpleInfoHeight(),
                   color: Settings.themeWhat
-                      ? Colors.grey.shade900.withOpacity(0.6)
-                      : Colors.white.withOpacity(0.2),
+                      ? Colors.grey.shade900.withValues(alpha: 0.6)
+                      : Colors.white.withValues(alpha: 0.2),
                   child: SimpleInfoWidget(),
                 ),
                 buttonArea(context),

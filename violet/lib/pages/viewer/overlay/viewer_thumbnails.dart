@@ -77,7 +77,8 @@ class _ViewerThumbnailState extends State<ViewerThumbnail> {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
           child: Container(
-            decoration: BoxDecoration(color: Colors.black.withOpacity(0.4)),
+            decoration:
+                BoxDecoration(color: Colors.black.withValues(alpha: 0.4)),
             padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
             child: _buildThumbanilsList(),
           ),
@@ -85,7 +86,7 @@ class _ViewerThumbnailState extends State<ViewerThumbnail> {
       );
     } else {
       return Container(
-        color: Colors.black.withOpacity(0.8),
+        color: Colors.black.withValues(alpha: 0.8),
         padding: EdgeInsets.only(bottom: Variables.bottomBarHeight),
         child: _buildThumbanilsList(),
       );
@@ -225,7 +226,7 @@ class _ViewerThumbnailState extends State<ViewerThumbnail> {
             child: Container(
               padding: const EdgeInsets.only(bottom: 1),
               width: double.infinity,
-              color: Colors.black.withOpacity(0.7),
+              color: Colors.black.withValues(alpha: 0.7),
               child: Text(
                 '${index + 1} page',
                 textAlign: TextAlign.right,

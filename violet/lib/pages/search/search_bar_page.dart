@@ -494,7 +494,7 @@ class _SearchBarPageState extends State<SearchBarPage>
                   //   title: Slider(
                   //     activeColor: Settings.majorColor,
                   //     inactiveColor: Settings.majorColor
-                  //         .withOpacity(0.2),
+                  //         .withValues(alpha: 0.2),
                   //     min: 60.0,
                   //     max: 2000.0,
                   //     divisions: (2000 - 60) ~/ 30,
@@ -793,7 +793,7 @@ class _SearchBarPageState extends State<SearchBarPage>
     } else if (info.$1.group == 'series') {
       color = Colors.cyan;
     } else if (info.$1.group == 'artist' || info.$1.group == 'group') {
-      color = Colors.green.withOpacity(0.6);
+      color = Colors.green.withValues(alpha: 0.6);
     } else if (info.$1.group == 'type' || info.$1.group == 'page') {
       color = Colors.orange;
     }

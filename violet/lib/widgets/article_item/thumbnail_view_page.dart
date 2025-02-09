@@ -48,8 +48,8 @@ class _ThumbnailViewPageState extends State<ThumbnailViewPage> {
           boxShadow: [
             BoxShadow(
               color: Settings.themeWhat
-                  ? Colors.black.withOpacity(0.2)
-                  : Colors.grey.withOpacity(0.2),
+                  ? Colors.black.withValues(alpha: 0.2)
+                  : Colors.grey.withValues(alpha: 0.2),
               spreadRadius: 1,
               blurRadius: 1,
               offset: const Offset(0, 3), // changes position of shadow

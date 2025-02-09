@@ -20,7 +20,7 @@ class VersionViewPage extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(1)),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
+              color: Colors.grey.withValues(alpha: 0.2),
               spreadRadius: 1,
               blurRadius: 1,
               offset: const Offset(0, 3), // changes position of shadow
@@ -33,8 +33,8 @@ class VersionViewPage extends StatelessWidget {
           children: <Widget>[
             Card(
               color: Settings.themeWhat
-                  ? Colors.black.withOpacity(0.9)
-                  : Colors.white.withOpacity(0.9),
+                  ? Colors.black.withValues(alpha: 0.9)
+                  : Colors.white.withValues(alpha: 0.9),
               elevation: 10,
               child: SizedBox(
                 child: Container(

@@ -61,7 +61,7 @@ class _LabUserBookmarkPageState extends State<LabUserBookmarkPage> {
           BoxShadow(
             color: Settings.themeWhat
                 ? Colors.black26
-                : Colors.grey.withOpacity(0.1),
+                : Colors.grey.withValues(alpha: 0.1),
             spreadRadius: Settings.themeWhat ? 0 : 5,
             blurRadius: 7,
             offset: const Offset(0, 3),

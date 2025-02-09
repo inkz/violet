@@ -128,7 +128,7 @@ class AfterLoadingPageState extends State<AfterLoadingPage>
         backgroundColor: Settings.themeWhat
             ? Settings.themeBlack
                 ? const Color(0xFF060606)
-                : Colors.grey.shade900.withOpacity(0.90)
+                : Colors.grey.shade900.withValues(alpha: 0.90)
             : Colors.grey.shade50,
         icon: Icon(iconData),
         label: translations.trans(key),
@@ -209,15 +209,15 @@ class AfterLoadingPageState extends State<AfterLoadingPage>
         height: 54,
         child: Container(
           decoration: BoxDecoration(
-              color: page == _currentPage ? color.withOpacity(0.4) : null,
+              color: page == _currentPage ? color.withValues(alpha: 0.4) : null,
               borderRadius: const BorderRadius.all(Radius.circular(10))),
           child: InkWell(
             customBorder: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10))),
             hoverColor: color,
-            highlightColor: color.withOpacity(0.2),
+            highlightColor: color.withValues(alpha: 0.2),
             focusColor: color,
-            splashColor: color.withOpacity(0.3),
+            splashColor: color.withValues(alpha: 0.3),
             child: Row(
               children: [
                 const SizedBox(width: 12),

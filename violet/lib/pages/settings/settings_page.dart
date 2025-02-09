@@ -149,7 +149,7 @@ class _SettingsPageState extends State<SettingsPage>
                 BoxShadow(
                   color: Settings.themeWhat
                       ? Colors.black26
-                      : Colors.grey.withOpacity(0.1),
+                      : Colors.grey.withValues(alpha: 0.1),
                   spreadRadius: Settings.themeWhat ? 0 : 5,
                   blurRadius: 7,
                   offset: const Offset(0, 3), // changes position of shadow
@@ -276,7 +276,7 @@ class _SettingsPageState extends State<SettingsPage>
                       useMaterial3: false,
                       brightness: Theme.of(context).brightness,
                       bottomSheetTheme: BottomSheetThemeData(
-                          backgroundColor: Colors.black.withOpacity(0)),
+                          backgroundColor: Colors.black.withValues(alpha: 0)),
                       scaffoldBackgroundColor:
                           Settings.themeBlack && Settings.themeWhat
                               ? Colors.black
@@ -327,7 +327,8 @@ class _SettingsPageState extends State<SettingsPage>
                           useMaterial3: false,
                           brightness: Theme.of(context).brightness,
                           bottomSheetTheme: BottomSheetThemeData(
-                              backgroundColor: Colors.black.withOpacity(0)),
+                              backgroundColor:
+                                  Colors.black.withValues(alpha: 0)),
                           scaffoldBackgroundColor:
                               Settings.themeBlack && Settings.themeWhat
                                   ? Colors.black

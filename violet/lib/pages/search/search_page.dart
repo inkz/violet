@@ -352,8 +352,8 @@ class _SearchPageState extends ThemeSwitchableState<SearchPage>
           color: Settings.themeWhat
               ? Settings.themeBlack
                   ? Palette.blackThemeBackground
-                  : Colors.grey.shade900.withOpacity(0.4)
-              : Colors.grey.shade200.withOpacity(0.4),
+                  : Colors.grey.shade900.withValues(alpha: 0.4)
+              : Colors.grey.shade200.withValues(alpha: 0.4),
           child: ListTile(
             title: textFormField,
             leading: SizedBox(

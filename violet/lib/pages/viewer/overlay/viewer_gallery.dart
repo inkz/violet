@@ -178,7 +178,7 @@ class _ViewerGalleryState extends State<ViewerGallery> {
                   child: Container(
                     padding: const EdgeInsets.only(bottom: 1),
                     width: double.infinity,
-                    color: Colors.black.withOpacity(0.7),
+                    color: Colors.black.withValues(alpha: 0.7),
                     child: Text(
                       '${index + 1} page',
                       textAlign: TextAlign.right,
@@ -301,7 +301,7 @@ class _ViewerGalleryState extends State<ViewerGallery> {
                       child: Container(
                         padding: const EdgeInsets.only(bottom: 1),
                         width: double.infinity,
-                        color: Colors.black.withOpacity(0.7),
+                        color: Colors.black.withValues(alpha: 0.7),
                         child: Text(
                           '${index + 1} page',
                           textAlign: TextAlign.right,
@@ -314,8 +314,8 @@ class _ViewerGalleryState extends State<ViewerGallery> {
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          splashColor: Colors.black.withOpacity(0.4),
-                          highlightColor: Colors.black.withOpacity(0.1),
+                          splashColor: Colors.black.withValues(alpha: 0.4),
+                          highlightColor: Colors.black.withValues(alpha: 0.1),
                           onTap: () {
                             Navigator.pop(context, index);
                           },

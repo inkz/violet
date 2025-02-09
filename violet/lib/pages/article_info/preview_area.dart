@@ -106,7 +106,7 @@ class PreviewAreaWidget extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.only(bottom: 1),
               width: double.infinity,
-              color: Colors.black.withOpacity(0.7),
+              color: Colors.black.withValues(alpha: 0.7),
               child: Text(
                 '${index + 1} page',
                 textAlign: TextAlign.right,
