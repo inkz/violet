@@ -311,7 +311,7 @@ class AfterLoadingPageState extends State<AfterLoadingPage>
 
     return PopScope(
       canPop: false,
-      onPopInvoked: (bool didPop) async {
+      onPopInvokedWithResult: (bool didPop, _) async {
         if (didPop) {
           return;
         }

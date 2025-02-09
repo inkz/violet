@@ -130,7 +130,7 @@ class _ViewerPageState extends State<ViewerPage> {
 
     return PopScope(
       canPop: true,
-      onPopInvoked: _handlePopInvoked,
+      onPopInvokedWithResult: _handlePopInvoked,
       child: pageKeyListener,
     );
   }
@@ -266,7 +266,7 @@ class _ViewerPageState extends State<ViewerPage> {
     await _savePageRead();
   }
 
-  Future<void> _handlePopInvoked(bool didPop) async {
+  Future<void> _handlePopInvoked(bool didPop, dynamic _) async {
     await _close();
   }
 
